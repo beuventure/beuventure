@@ -1,146 +1,1005 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi" class="dark scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="google-site-verification" content="ZZW923spWBbE8SSIjLw3IejOmmrBPlj8gdl8vRCQTAM" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="BEU Venture is an independent student community for Bihar Engineering University students, sharing internships, scholarships, exams, opportunities and useful resources.">
-  <meta name="keywords" content="BEU Venture, BEU students, Bihar Engineering University, internships, scholarships, GATE, hackathons, student opportunities, BEU result, BEU syllabus, PYQ">
-  <meta name="author" content="BEU Venture">
-  <meta name="theme-color" content="#0b1736">
-  <title>BEU Venture — Learn • Connect • Grow</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Primary SEO Meta Tags -->
+  <title>BEU Venture | Learn • Connect • Grow | Bihar Engineering University Student Hub</title>
+  <meta name="title" content="BEU Venture | Learn • Connect • Grow | Bihar Engineering University Student Hub" />
+  <meta name="description" content="BEU Venture is an independent student-focused platform for Bihar Engineering University (BEU) students. Access internships, scholarships, BEU results, syllabus, GATE/UPSC ESE exam updates, and placement interview questions." />
+  <meta name="keywords" content="BEU Venture, BEU Bihar, Bihar Engineering University, BEU Results, BEU Syllabus, BEU PYQ, AICTE Internship, Bihar Post Matric Scholarship, GATE Exam Prep, Engineering Student Community" />
+  <meta name="author" content="BEU Venture Community" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href="https://beuventure.github.io/beuventure/" />
+  <!-- Google Search Console Ownership Verification Placeholder -->
+  <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" />
+  <!-- Open Graph / Facebook / WhatsApp SEO -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://beuventure.github.io/beuventure/" />
+  <meta property="og:title" content="BEU Venture | Student Hub for BEU Bihar Opportunities & Academics" />
+  <meta property="og:description" content="Discover verified internships, BEU results, exam schedules, scholarships, and career preparation resources in one place." />
+  <meta property="og:image" content="https://beuventure.github.io/beuventure/og-image.png" />
+  <!-- Twitter SEO -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://beuventure.github.io/beuventure/" />
+  <meta property="twitter:title" content="BEU Venture | Learn • Connect • Grow" />
+  <meta property="twitter:description" content="Independent student platform for Bihar Engineering University students to find internships, results, and career guides." />
+  <meta property="twitter:image" content="https://beuventure.github.io/beuventure/og-image.png" />
+  <!-- Structured Data / JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "BEU Venture",
+    "url": "https://beuventure.github.io/beuventure/",
+    "logo": "https://beuventure.github.io/beuventure/logo.png",
+    "description": "BEU Venture is an independent student-run platform helping Bihar Engineering University students discover internships, scholarships, examination results, syllabi, and job placement prep.",
+    "sameAs": [
+      "https://whatsapp.com/channel/0029VbDGLDr7dmeWVgWBDT2R",
+      "https://instagram.com/beuventure"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Bihar",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- React & React DOM CDNs -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <!-- Babel for JSX Compilation -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    @keyframes livePulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.2); }
+    }
+    .live-dot {
+      animation: livePulse 1.8s infinite ease-in-out;
+    }
+    @keyframes tickerMove {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .ticker-content {
+      display: inline-block;
+      white-space: nowrap;
+      animation: tickerMove 28s linear infinite;
+    }
+    .ticker-content:hover {
+      animation-play-state: paused;
+    }
+  </style>
 </head>
-<body>
-<header class="site-header"><div class="container nav-wrap">
-  <a class="brand" href="#home" aria-label="BEU Venture home"><span class="brand-mark">BEU</span><span><strong>BEU Venture</strong><small>Learn • Connect • Grow</small></span></a>
-  <button class="menu-btn" aria-label="Open menu" aria-expanded="false">☰</button>
-  <nav class="nav" id="nav"><a href="#updates">Updates</a><a href="#opportunities">Opportunities</a><a href="#resources">Resources</a><a href="#about">About</a></nav>
-</div></header>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-950">
+  <div id="root"></div>
+  <script type="text/babel">
+    const { useState, useEffect } = React;
 
-<main id="home">
-<section class="hero"><div class="container hero-grid"><div>
-  <p class="eyebrow">INDEPENDENT STUDENT COMMUNITY</p>
-  <h1>Useful opportunities for <span>BEU students.</span></h1>
-  <p class="hero-text">Internships, scholarships, exams, hackathons, academic resources and career updates — collected in one simple place.</p>
-  <div class="hero-actions"><a class="btn primary" href="#updates">Explore Updates</a><a class="btn secondary" href="https://whatsapp.com/channel/0029VbDGLDr7dmeWVgWBDT2R" target="_blank" rel="noopener">Join WhatsApp</a></div>
-  <p class="trust-note">Independent student-run platform • Always verify important information from the official source.</p>
-</div><div class="hero-card"><div class="hero-card-top"><span class="live-dot"></span><span>What you'll find here</span></div><div class="mini-grid">
-  <a href="#scholarships"><b>🎓</b><span>Scholarships</span></a><a href="#internships"><b>💼</b><span>Internships</span></a><a href="#results"><b>📝</b><span>Results</span></a><a href="#hackathons"><b>🏆</b><span>Hackathons</span></a><a href="#resources"><b>📚</b><span>Resources</span></a><a href="#interview"><b>🚀</b><span>Careers</span></a>
-</div></div></div></section>
+    // Scholarship Sub-Categories Data
+    const scholarshipCategories = [
+      {
+        id: "bihar-pms",
+        name: "Bihar Post Matric Scholarship (PMS)",
+        badge: "BIHAR GOVT",
+        desc: "Official scholarship portal for SC, ST, BC, and EBC students studying in professional engineering courses across Bihar.",
+        link: "https://scstpmsonline.bihar.gov.in/pms/pms_online/",
+        features: ["Tuition Fee Reimbursement", "Maintenance Allowance", "Direct Bank Transfer (DBT)"]
+      },
+      {
+        id: "nsp",
+        name: "National Scholarship Portal (NSP)",
+        badge: "CENTRAL GOVT",
+        desc: "Central government umbrella portal for merit-cum-means and various central sector scholarship schemes for technical students.",
+        link: "https://nsp.gov.in/",
+        features: ["Centrally Sponsored Schemes", "Merit-based Awards", "Aadhaar Seeded Payments"]
+      },
+      {
+        id: "mnssby",
+        name: "MNSSBY Student Credit Card Scheme",
+        badge: "DRCC BIHAR",
+        desc: "Mukhyamantri Nischay Swayam Sahayata Yojna offering up to Rs. 4 Lakh education loan at 1% interest for B.Tech students.",
+        link: "https://www.7nishchay-yuvaupmission.bihar.gov.in/",
+        features: ["Rs. 4 Lakh Education Loan", "1% Interest Rate for Girls/Disabled", "Easy Repayment After Placement"]
+      },
+      {
+        id: "aicte",
+        name: "AICTE Pragati & Saksham Schemes",
+        badge: "AICTE SCHOLARSHIP",
+        desc: "Special scholarships by AICTE for girl students pursuing technical education (Pragati) and specially-abled students (Saksham).",
+        link: "https://www.aicte-india.org/schemes/students-development-schemes",
+        features: ["Rs. 50,000 Per Annum Support", "Exclusively for Girls & Divyang", "Tuition Fee & Book Grant"]
+      }
+    ];
 
-<section class="section" id="updates"><div class="container"><div class="section-head"><div><p class="eyebrow">LATEST</p><h2>Student updates</h2></div><span class="date-label">Updated regularly</span></div><div class="cards">
-  <article class="card post-card"><span class="tag scholarship">SCHOLARSHIP</span><h3>Scholarships & Financial Aid</h3><p>Find official scholarship and financial-aid portals for eligible students.</p><a href="#scholarships">Explore →</a></article>
-  <article class="card post-card"><span class="tag internship">INTERNSHIP</span><h3>Internship Opportunities</h3><p>Discover verified internship and work-based learning opportunities.</p><a href="#internships">Explore →</a></article>
-  <article class="card post-card"><span class="tag exam">EXAM</span><h3>Exams & Results</h3><p>Access the BEU result portal and useful competitive-exam links.</p><a href="#results">Explore →</a></article>
-  <article class="card post-card"><span class="tag hackathon">HACKATHON</span><h3>Hackathons & Competitions</h3><p>Find hackathons, coding competitions, quizzes and student challenges.</p><a href="#hackathons">Explore →</a></article>
-  <article class="card post-card"><span class="tag govt">GOVT EXAM</span><h3>Government & Competitive Exams</h3><p>Official portals for GATE, UPSC, SSC and Bihar opportunities.</p><a href="#govt-exams">Explore →</a></article>
-  <article class="card post-card"><span class="tag placement">PLACEMENT</span><h3>Placement & Career</h3><p>Resume, aptitude, interview and career preparation resources.</p><a href="#interview">Explore →</a></article>
-</div></div></section>
+    // Branch-wise Placement & Interview Questions Data
+    const placementBranches = [
+      {
+        id: "cse",
+        name: "Computer Science & Engg (CSE)",
+        badge: "SOFTWARE & IT",
+        desc: "Core software engineering, coding fundamentals, DSA, and object-oriented programming.",
+        questions: [
+          { title: "Data Structures & Algorithms (DSA)", desc: "Arrays, Strings, Linked Lists, Binary Trees, Graphs, Sorting & Searching techniques." },
+          { title: "Object-Oriented Programming (OOPs)", desc: "Four main pillars: Inheritance, Polymorphism, Encapsulation, and Data Abstraction." },
+          { title: "Database Management Systems (DBMS)", desc: "Normalization (1NF to 3NF), SQL Joins, ACID properties, Indexing, Transactions." },
+          { title: "Operating Systems & Networking", desc: "Process scheduling, Deadlocks, TCP/IP vs OSI model, HTTP/HTTPS and DNS working." }
+        ]
+      },
+      {
+        id: "ee",
+        name: "Electrical Engineering (EE)",
+        badge: "CORE ELECTRICAL",
+        desc: "Electrical machines, power systems, circuit theory, and control systems.",
+        questions: [
+          { title: "Electrical Machines", desc: "Transformers equivalent circuit, DC motors, 3-phase Induction motors, Synchronous generators." },
+          { title: "Power Systems", desc: "Generation, Transmission lines parameters, Fault analysis (Symmetrical/Unsymmetrical), Circuit breakers." },
+          { title: "Network Theory & Circuits", desc: "Thevenin's & Norton's theorems, transient response of RL/RC circuits, Laplace transform applications." },
+          { title: "Control Systems", desc: "Bode plots, Nyquist stability criterion, PID controllers, Transfer function derivation." }
+        ]
+      },
+      {
+        id: "ece",
+        name: "Electronics & Communication (ECE)",
+        badge: "CORE ELECTRONICS",
+        desc: "Analog & digital electronics, microprocessors, communication systems, and VLSI.",
+        questions: [
+          { title: "Digital & Analog Electronics", desc: "Logic gates, Karnaugh maps, Flip-flops, OP-AMP configurations, Diode & BJT/MOSFET biasing." },
+          { title: "Microprocessors & Microcontrollers", desc: "8085 architecture, 8051 microcontroller pinout, interrupt handling, embedded C basics." },
+          { title: "Communication Systems", desc: "AM/FM modulation, PCM, Shannon-Hartley theorem, digital modulation schemes (PSK, QAM)." },
+          { title: "VLSI & Signal Processing", desc: "CMOS inverter design, Fourier transforms, sampling theorem, digital filters." }
+        ]
+      },
+      {
+        id: "civil",
+        name: "Civil Engineering",
+        badge: "CORE CIVIL",
+        desc: "Structural analysis, strength of materials, geotechnical engineering, and surveying.",
+        questions: [
+          { title: "Strength of Materials (SOM)", desc: "Bending moment & shear force diagrams, deflection of beams, torsion, stress-strain relations." },
+          { title: "Geotechnical Engineering", desc: "Soil classification, permeability, shear strength parameters, foundation design, compaction." },
+          { title: "Concrete Technology & Surveying", desc: "IS code concrete mix design, curing, leveling, theodolite surveying, GPS mapping." },
+          { title: "Environmental & Transportation", desc: "Water treatment processes, sewage disposal, highway geometric design, traffic engineering." }
+        ]
+      },
+      {
+        id: "mech",
+        name: "Mechanical Engineering",
+        badge: "CORE MECHANICAL",
+        desc: "Thermodynamics, fluid mechanics, machine design, and manufacturing processes.",
+        questions: [
+          { title: "Thermodynamics & Heat Transfer", desc: "Laws of thermodynamics, IC engines cycles, refrigeration, conduction, convection, radiation." },
+          { title: "Fluid Mechanics & Machinery", desc: "Navier-Stokes equations, Bernoulli's principle, centrifugal pumps, hydraulic turbines." },
+          { title: "Theory of Machines & Design", desc: "Gears, cams, governors, fatigue failure, stress concentration factors, shaft design." },
+          { title: "Manufacturing Science", desc: "Casting design, welding processes, CNC machining operations, metal forming, industrial engineering." }
+        ]
+      }
+    ];
 
-<section class="section alt" id="opportunities"><div class="container"><div class="section-head"><div><p class="eyebrow">DISCOVER</p><h2>Opportunities</h2></div></div><div class="feature-grid">
-  <div class="feature" id="internships"><span>💼</span><h3>Internships</h3><p>Start with the official AICTE Internship Portal for verified opportunities.</p><a class="feature-btn" href="https://internship.aicte-india.org/" target="_blank" rel="noopener">AICTE Internship Portal →</a></div>
-  <div class="feature" id="scholarships"><span>🎓</span><h3>Scholarships</h3><p>Official national and Bihar scholarship portals for students.</p><a class="feature-btn" href="#scholarship-links">View scholarship portals →</a></div>
-  <div class="feature" id="hackathons"><span>🏆</span><h3>Hackathons</h3><p>Explore current hackathons and competitions on trusted platforms.</p><a class="feature-btn" href="https://unstop.com/compete/amp" target="_blank" rel="noopener">Explore Unstop →</a></div>
-  <div class="feature"><span>🧩</span><h3>Competitions</h3><p>Student competitions, quizzes and challenges from trusted platforms.</p><a class="feature-btn" href="https://unstop.com/compete/amp" target="_blank" rel="noopener">Explore Competitions →</a></div>
-  <div class="feature"><span>📈</span><h3>Placements</h3><p>Build your resume, aptitude, communication and interview skills.</p><a class="feature-btn" href="#interview">Prepare for placements →</a></div>
-  <div class="feature" id="govt-exams"><span>🏛️</span><h3>Government Exams</h3><p>Official portals for engineering and competitive government exams.</p><a class="feature-btn" href="#exam-links">View official exam portals →</a></div>
-</div></div></section>
+    const studentUpdates = [
+      {
+        badge: "SCHOLARSHIP",
+        icon: "graduation-cap",
+        title: "Scholarships & Financial Aid",
+        desc: "Find official scholarship and financial-aid portals for eligible engineering students in Bihar.",
+        link: "#scholarships-section",
+        target: "_self"
+      },
+      {
+        badge: "INTERNSHIP",
+        icon: "briefcase",
+        title: "AICTE Internship Opportunities",
+        desc: "Discover verified internship and work-based learning opportunities directly on AICTE.",
+        link: "https://internship.aicte-india.org/",
+        target: "_blank"
+      },
+      {
+        badge: "EXAM & PYQ",
+        icon: "file-text",
+        title: "BEU Exams, PYQs & Results Portal",
+        desc: "Access official BEU result portal, semester schedules, previous year papers, and downloads.",
+        link: "#academics",
+        target: "_self"
+      },
+      {
+        badge: "HACKATHON",
+        icon: "trophy",
+        title: "Hackathons & Competitions",
+        desc: "Find hackathons, coding competitions, quizzes and national student challenges on Unstop & SIH.",
+        link: "https://unstop.com/compete/amp",
+        target: "_blank"
+      },
+      {
+        badge: "GOVT EXAM",
+        icon: "building-2",
+        title: "Government & Competitive Exams",
+        desc: "Official portals for GATE, UPSC ESE, SSC JE, BPSC AE, BTSC, and Indian Railways.",
+        link: "#gov-exams",
+        target: "_self"
+      },
+      {
+        badge: "PLACEMENT",
+        icon: "rocket",
+        title: "Placement & Career Prep",
+        desc: "Branch-wise technical question banks, resume templates, and interview roadmaps.",
+        link: "#career",
+        target: "_self"
+      }
+    ];
 
-<section class="section" id="resources"><div class="container"><div class="section-head"><div><p class="eyebrow">STUDY & CAREER</p><h2>Resources</h2></div></div><div class="resource-list">
-  <a href="#results"><span>📘</span><div><strong>BEU Results</strong><small>Semester-wise access to the official Bihar Engineering University result portal</small></div><b>→</b></a>
-  <a href="#syllabus"><span>📚</span><div><strong>B.Tech & M.Tech Syllabus</strong><small>Official BEU syllabus source and a structure ready for semester-wise resources</small></div><b>→</b></a>
-  <a href="#pyq"><span>📄</span><div><strong>Previous Year Papers</strong><small>PYQ area with legitimate/free sources and BEU Venture original material support</small></div><b>→</b></a>
-  <a href="#notes"><span>📝</span><div><strong>Notes & Study Material</strong><small>Free learning platforms and a space for original BEU Venture notes</small></div><b>→</b></a>
-  <a href="#interview"><span>💼</span><div><strong>Resume & Career Resources</strong><small>Resume, aptitude, placement and interview preparation resources</small></div><b>→</b></a>
-  <a href="#interview"><span>🗣️</span><div><strong>Interview Preparation</strong><small>Technical, HR, aptitude and placement preparation roadmap</small></div><b>→</b></a>
-  <a href="#tools"><span>🛠️</span><div><strong>Useful Student Tools</strong><small>Simple SGPA, CGPA and percentage calculators</small></div><b>→</b></a>
-</div></div></section>
+    const opportunities = [
+      {
+        title: "AICTE Internship Portal",
+        badge: "VERIFIED",
+        desc: "Official government portal for 100% verified technical and core branch internships.",
+        link: "https://internship.aicte-india.org/",
+        icon: "briefcase"
+      },
+      {
+        title: "Unstop Hackathons & Quizzes",
+        badge: "COMPETE",
+        desc: "Compete in national level coding contests, hackathons, and win cash prizes.",
+        link: "https://unstop.com/compete/amp",
+        icon: "code"
+      },
+      {
+        title: "Smart India Hackathon (SIH)",
+        badge: "NATIONAL",
+        desc: "India's biggest hardware & software hackathon by Ministry of Education.",
+        link: "https://sih.gov.in/",
+        icon: "sparkles"
+      },
+      {
+        title: "Ministry of Education Fellowships",
+        badge: "FELLOWSHIPS",
+        desc: "Official list of scholarships and research grants provided by MoE India.",
+        link: "https://www.education.gov.in/scholarship-and-fellowships-students",
+        icon: "book-open"
+      }
+    ];
 
-<section class="section alt" id="results"><div class="container"><div class="section-head"><div><p class="eyebrow">ACADEMICS</p><h2>BEU Results</h2></div></div><div class="resource-panel"><div><h3>Official Bihar Engineering University Result Portal</h3><p>Use the official BEU portal to check available semester results. BEU Venture does not collect or store your result data.</p></div><a class="btn primary" href="https://beu-bih.ac.in/result-one" target="_blank" rel="noopener">Check Official BEU Result →</a></div><div class="quick-grid"><a href="https://beu-bih.ac.in/result-one" target="_blank" rel="noopener">B.Tech • Semester 1–8 <span>↗</span></a><a href="https://beu-bih.ac.in/result-one" target="_blank" rel="noopener">M.Tech • Semester-wise <span>↗</span></a></div></div></section>
+    const govtExams = [
+      { title: "GATE Official Portal", desc: "IIT GATE portal for official question papers, syllabus, & registration.", link: "https://gate2027.iitm.ac.in/", icon: "cpu" },
+      { title: "UPSC / ESE", desc: "Engineering Services Examination (ESE), active exams & PYQs.", link: "https://www.upsc.gov.in/examinations/active-exams", icon: "building" },
+      { title: "SSC Junior Engineer (JE)", desc: "Staff Selection Commission official portal for Junior Engineer exams.", link: "https://ssc.gov.in/", icon: "file-spreadsheet" },
+      { title: "BPSC Engineering (AE)", desc: "Bihar Public Service Commission Assistant Engineer recruitments.", link: "https://www.bpsc.bih.nic.in/", icon: "landmark" },
+      { title: "BTSC Technical", desc: "Bihar Technical Service Commission official recruitment notices.", link: "https://btsc.bihar.gov.in/", icon: "wrench" },
+      { title: "Indian Railways (RRB JE)", desc: "Official recruitment updates and JE/SSE notices via RRB.", link: "https://indianrailways.gov.in/", icon: "train" }
+    ];
 
-<section class="section" id="syllabus"><div class="container"><div class="section-head"><div><p class="eyebrow">ACADEMICS</p><h2>B.Tech & M.Tech Syllabus</h2></div></div><div class="resource-panel"><div><h3>Official BEU Syllabus Sources</h3><p>Use official BEU pages for current syllabus documents. Where BEU has not published a document, BEU Venture will not invent one.</p></div><div class="panel-actions"><a class="btn primary" href="https://beu-bih.ac.in/Syllabus.aspx" target="_blank" rel="noopener">BEU Syllabus →</a><a class="btn secondary" href="https://beu-bih.ac.in/Academics/Syllabus" target="_blank" rel="noopener">BEU Academics →</a></div></div><div class="quick-grid"><div><strong>B.Tech</strong><small>Branch → Semester 1–8 → Subject</small></div><div><strong>M.Tech</strong><small>Programme → Semester → Subject</small></div></div></div></section>
+    function App() {
+      const [academicTab, setAcademicTab] = useState("results");
+      const [searchQuery, setSearchQuery] = useState("");
+      const [activeScholarship, setActiveScholarship] = useState(0);
+      const [activePlacementBranch, setActivePlacementBranch] = useState(0);
 
-<section class="section alt" id="pyq"><div class="container"><div class="section-head"><div><p class="eyebrow">EXAM PREP</p><h2>Previous Year Papers</h2></div></div><div class="resource-panel"><div><h3>PYQ Library</h3><p>Semester → Subject → Year. BEU Venture original PDFs can be added later. Copyrighted material from random sites will not be re-uploaded or rebranded.</p></div><a class="btn secondary" href="https://www.upsc.gov.in/examinations/previous-question-papers" target="_blank" rel="noopener">Official UPSC PYQs →</a></div><div class="quick-grid"><div><strong>B.Tech PYQ</strong><small>Branch → Semester → Subject → Year</small></div><div><strong>M.Tech PYQ</strong><small>Programme → Semester → Subject → Year</small></div></div></div></section>
+      useEffect(() => {
+        if (window.lucide) {
+          window.lucide.createIcons();
+        }
+      }, [activeScholarship, activePlacementBranch, academicTab]);
 
-<section class="section" id="notes"><div class="container"><div class="section-head"><div><p class="eyebrow">FREE LEARNING</p><h2>Notes & Study Material</h2></div></div><div class="link-grid">
-  <a class="link-card" href="https://nptel.ac.in/" target="_blank" rel="noopener"><span>🎓</span><strong>NPTEL</strong><small>Free/accessible courses from IITs and IISc</small><b>Open →</b></a>
-  <a class="link-card" href="https://swayam.gov.in/" target="_blank" rel="noopener"><span>📖</span><strong>SWAYAM</strong><small>Government-backed online courses</small><b>Open →</b></a>
-  <a class="link-card" href="https://ocw.mit.edu/" target="_blank" rel="noopener"><span>🧠</span><strong>MIT OpenCourseWare</strong><small>Free course materials and learning resources</small><b>Open →</b></a>
-  <a class="link-card" href="https://gate2027.iitm.ac.in/exam_papers_and_syllabus" target="_blank" rel="noopener"><span>📑</span><strong>GATE 2027 Syllabus</strong><small>Official paper-wise syllabus</small><b>Open →</b></a>
-</div></div></section>
+      const handleMouseMove = (e) => {
+        const card = e.currentTarget;
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.animate(
+          [
+            {
+              background: `radial-gradient(450px circle at ${x}px ${y}px, rgba(14, 165, 233, 0.15), transparent 80%)`,
+            },
+          ],
+          { duration: 200, fill: "forwards" }
+        );
+      };
 
-<section class="section alt" id="exam-links"><div class="container"><div class="section-head"><div><p class="eyebrow">CAREER & EXAMS</p><h2>Government & Competitive Exams</h2></div></div><div class="link-grid">
-  <a class="link-card" href="https://gate2027.iitm.ac.in/" target="_blank" rel="noopener"><span>📐</span><strong>GATE 2027</strong><small>Official IIT Madras GATE portal</small><b>Open →</b></a>
-  <a class="link-card" href="https://www.upsc.gov.in/examinations/active-exams" target="_blank" rel="noopener"><span>🏛️</span><strong>UPSC / ESE</strong><small>Official active examinations, including Engineering Services</small><b>Open →</b></a>
-  <a class="link-card" href="https://ssc.gov.in/" target="_blank" rel="noopener"><span>🧾</span><strong>SSC / JE</strong><small>Official Staff Selection Commission portal</small><b>Open →</b></a>
-  <a class="link-card" href="https://www.bpsc.bih.nic.in/" target="_blank" rel="noopener"><span>🏢</span><strong>BPSC</strong><small>Official Bihar Public Service Commission portal</small><b>Open →</b></a>
-  <a class="link-card" href="https://btsc.bihar.gov.in/" target="_blank" rel="noopener"><span>⚙️</span><strong>BTSC</strong><small>Official Bihar Technical Service Commission portal</small><b>Open →</b></a>
-  <a class="link-card" href="https://indianrailways.gov.in/" target="_blank" rel="noopener"><span>🚆</span><strong>Indian Railways</strong><small>Official Indian Railways portal; check recruitment notices through official RRB sources</small><b>Open →</b></a>
-</div></div></section>
+      const handleMouseLeave = (e) => {
+        e.currentTarget.animate(
+          [
+            {
+              background: `radial-gradient(450px circle at 50% 50%, rgba(14, 165, 233, 0), transparent 80%)`,
+            },
+          ],
+          { duration: 400, fill: "forwards" }
+        );
+      };
 
-<section class="section" id="scholarship-links"><div class="container"><div class="section-head"><div><p class="eyebrow">FINANCIAL AID</p><h2>Scholarship Portals</h2></div></div><div class="link-grid">
-  <a class="link-card" href="https://nsp.gov.in/" target="_blank" rel="noopener"><span>🎓</span><strong>National Scholarship Portal</strong><small>Government of India scholarship platform</small><b>Open →</b></a>
-  <a class="link-card" href="https://pmsonline.bihar.gov.in/" target="_blank" rel="noopener"><span>🟢</span><strong>Bihar Post-Matric Scholarship</strong><small>Official Bihar PMS portal</small><b>Open →</b></a>
-  <a class="link-card" href="https://scstpmsonline.bihar.gov.in/pms/pms_online/" target="_blank" rel="noopener"><span>📋</span><strong>Bihar SC/ST PMS</strong><small>Official SC/ST post-matric scholarship portal</small><b>Open →</b></a>
-  <a class="link-card" href="https://www.education.gov.in/scholarship-and-fellowships-students" target="_blank" rel="noopener"><span>🇮🇳</span><strong>MoE Scholarships</strong><small>Scholarships and fellowships listed by Ministry of Education</small><b>Open →</b></a>
-</div><p class="small-note">Always check eligibility, dates and documents on the official portal before applying.</p></div></section>
+      return (
+        <div className="min-h-screen flex flex-col justify-between bg-slate-950">
+          
+          {/* HEADER & LIVE TICKER */}
+          <header className="sticky top-0 z-50 bg-slate-950/85 backdrop-blur-xl border-b border-slate-800">
+            <div className="bg-gradient-to-r from-blue-950 via-cyan-950 to-slate-950 text-cyan-300 text-xs py-1.5 px-4 overflow-hidden border-b border-cyan-900/40 flex items-center">
+              <span className="bg-cyan-500 text-slate-950 px-2 py-0.5 rounded text-[10px] font-extrabold uppercase tracking-wider mr-3 shrink-0 flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-slate-950 live-dot"></span> UPDATES
+              </span>
+              <div className="overflow-hidden w-full relative">
+                <div className="ticker-content font-medium">
+                  📢 Welcome to BEU Venture • Explore Branch-wise Placement & Interview Questions • Scholarships & Verified Internships!
+                </div>
+              </div>
+            </div>
+            
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+              <a href="#" className="flex items-center gap-3 group" title="BEU Venture Home">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-slate-950 font-black text-xl shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
+                  BV
+                </div>
+                <div>
+                  <h1 className="font-bold text-lg leading-tight tracking-tight text-white flex items-center gap-2">
+                    BEU Venture
+                    <span className="text-[10px] bg-slate-800 text-cyan-400 border border-slate-700 px-1.5 py-0.5 rounded font-mono">STUDENT HUB</span>
+                  </h1>
+                  <p className="text-[11px] text-slate-400">Learn • Connect • Grow</p>
+                </div>
+              </a>
+              <nav className="hidden lg:flex items-center gap-6 text-xs font-semibold text-slate-300">
+                <a href="#scholarships-section" className="hover:text-cyan-400 transition-colors">Scholarships</a>
+                <a href="#updates" className="hover:text-cyan-400 transition-colors">Updates</a>
+                <a href="#opportunities" className="hover:text-cyan-400 transition-colors">Opportunities</a>
+                <a href="#academics" className="hover:text-cyan-400 transition-colors">Academics</a>
+                <a href="#gov-exams" className="hover:text-cyan-400 transition-colors">Govt Exams</a>
+                <a href="#career" className="hover:text-cyan-400 transition-colors">Placement Prep</a>
+              </nav>
+              <a
+                href="https://whatsapp.com/channel/0029VbDGLDr7dmeWVgWBDT2R"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs px-4 py-2.5 rounded-xl shadow-lg shadow-emerald-500/20 transition-all flex items-center gap-2"
+              >
+                <i data-lucide="message-circle" className="w-4 h-4"></i>
+                <span>Join WhatsApp</span>
+              </a>
+            </div>
+          </header>
 
-<section class="section alt" id="hackathon-links"><div class="container"><div class="section-head"><div><p class="eyebrow">BUILD & COMPETE</p><h2>Hackathons & Competitions</h2></div></div><div class="link-grid">
-  <a class="link-card" href="https://unstop.com/compete/amp" target="_blank" rel="noopener"><span>🏆</span><strong>Unstop</strong><small>Hackathons, competitions, quizzes and student opportunities</small><b>Explore →</b></a>
-  <a class="link-card" href="https://imaginecup.microsoft.com/en-us" target="_blank" rel="noopener"><span>💡</span><strong>Microsoft Imagine Cup</strong><small>Microsoft's student innovation competition hub</small><b>Explore →</b></a>
-</div><p class="small-note">An opportunity is not described as “open” unless its official page confirms the current status.</p></div></section>
+          {/* MAIN CONTENT */}
+          <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full space-y-16">
+            
+            {/* HERO SECTION */}
+            <section className="relative rounded-3xl bg-gradient-to-br from-slate-900 via-slate-900/90 to-cyan-950/60 border border-slate-800/80 p-8 sm:p-14 overflow-hidden shadow-2xl text-center sm:text-left">
+              <div className="max-w-3xl relative z-10 space-y-6">
+                <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-3.5 py-1.5 rounded-full text-xs font-semibold text-cyan-400">
+                  <i data-lucide="users" className="w-3.5 h-3.5"></i> INDEPENDENT STUDENT COMMUNITY
+                </div>
+                <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                  Useful Opportunities For <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-300">BEU Students.</span>
+                </h1>
+                <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                  Interactive scholarships, branch-wise placement question banks, verified internships, exam results, and academic roadmaps.
+                </p>
+                
+                {/* Search Bar */}
+                <div className="pt-2 max-w-lg">
+                  <div className="relative">
+                    <i data-lucide="search" className="w-4 h-4 text-slate-400 absolute left-4 top-3.5"></i>
+                    <input
+                      type="text"
+                      placeholder="Search for scholarships, CSE/EE questions, syllabus, GATE..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="w-full bg-slate-950/80 border border-slate-700/80 focus:border-cyan-500 rounded-xl pl-11 pr-4 py-3 text-xs text-slate-200 placeholder-slate-500 outline-none transition-all"
+                    />
+                  </div>
+                </div>
 
-<section class="section" id="interview"><div class="container"><div class="section-head"><div><p class="eyebrow">PLACEMENT PREP</p><h2>Interview & Career Preparation</h2></div></div><div class="prep-grid">
-  <div class="prep-card"><span>⚡</span><h3>Technical Interview</h3><p>Core Electrical: Machines, Power Systems, Power Electronics, Control Systems, Network Theory and Basic Electrical.</p><ul><li>Concepts & definitions</li><li>Derivations & numericals</li><li>Projects & practical questions</li><li>Branch-specific viva questions</li></ul></div>
-  <div class="prep-card"><span>👤</span><h3>HR Interview</h3><p>Prepare concise answers for common HR and situational questions.</p><ul><li>Tell me about yourself</li><li>Strengths & weaknesses</li><li>Why should we hire you?</li><li>Career goals & situations</li></ul></div>
-  <div class="prep-card"><span>🧮</span><h3>Aptitude</h3><p>Build placement-ready quantitative, reasoning and verbal skills.</p><ul><li>Quantitative aptitude</li><li>Logical reasoning</li><li>Verbal ability</li><li>Timed practice</li></ul></div>
-  <div class="prep-card"><span>📄</span><h3>Resume & Placement</h3><p>Keep your resume concise, evidence-based and tailored to the role.</p><ul><li>One-page student resume</li><li>Projects & skills</li><li>Internships & certificates</li><li>Communication & GD</li></ul></div>
-</div></div></section>
+                <div className="flex flex-wrap gap-4 pt-2 justify-center sm:justify-start">
+                  <a
+                    href="#scholarships-section"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold text-xs sm:text-sm px-6 py-3.5 rounded-xl shadow-lg shadow-cyan-500/25 transition-all flex items-center gap-2"
+                  >
+                    <span>Explore Financial Aid</span>
+                    <i data-lucide="arrow-right" className="w-4 h-4"></i>
+                  </a>
+                  <a
+                    href="https://whatsapp.com/channel/0029VbDGLDr7dmeWVgWBDT2R"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-slate-900 border border-slate-700 hover:border-slate-500 text-slate-200 font-semibold text-xs sm:text-sm px-6 py-3.5 rounded-xl transition-all flex items-center gap-2"
+                  >
+                    <span>Join Community</span>
+                    <i data-lucide="external-link" className="w-3.5 h-3.5"></i>
+                  </a>
+                </div>
+              </div>
+            </section>
 
-<section class="section alt" id="tools"><div class="container"><div class="section-head"><div><p class="eyebrow">STUDENT TOOLS</p><h2>Quick Calculators</h2></div></div><div class="calculator-grid">
-  <div class="calc-card"><h3>SGPA / CGPA</h3><label>Enter value</label><input id="gradeInput" type="number" step="0.01" min="0" max="10" placeholder="e.g. 7.25"><button class="btn primary calc-btn" data-target="gradeResult">Check value</button><p id="gradeResult" class="calc-result">Enter a value from 0–10.</p></div>
-  <div class="calc-card"><h3>Percentage</h3><label>Marks obtained</label><input id="marksInput" type="number" min="0" placeholder="e.g. 420"><label>Total marks</label><input id="totalInput" type="number" min="1" placeholder="e.g. 500"><button class="btn primary calc-btn" data-target="percentResult">Calculate</button><p id="percentResult" class="calc-result">Enter marks and total marks.</p></div>
-</div></div></section>
+            {/* 1: FINANCIAL AID HUB (SCHOLARSHIPS) */}
+            <section id="scholarships-section" className="space-y-6">
+              <div className="border-b border-slate-800/80 pb-4">
+                <span className="text-xs font-bold text-cyan-400 tracking-wider uppercase">FINANCIAL AID HUB</span>
+                <h2 className="text-2xl font-bold text-white tracking-tight mt-1">Scholarships & Student Credit Schemes</h2>
+                <p className="text-xs text-slate-400 mt-1">Click below to switch between SC/ST, BC/EBC, NSP, and DRCC Student Credit Card portals.</p>
+              </div>
 
+              <div className="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                {/* Left Tabs selection list */}
+                <div className="lg:col-span-5 space-y-3">
+                  {scholarshipCategories.map((item, idx) => (
+                    <button
+                      key={item.id}
+                      onClick={() => setActiveScholarship(idx)}
+                      className={`w-full text-left p-4 rounded-2xl transition-all duration-300 flex items-center justify-between border ${
+                        activeScholarship === idx
+                          ? "bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-500/60 shadow-lg shadow-cyan-500/10 text-white translate-x-1"
+                          : "bg-slate-950/60 border-slate-800/80 text-slate-400 hover:text-slate-200 hover:bg-slate-900"
+                      }`}
+                    >
+                      <div className="space-y-1">
+                        <span className={`text-[10px] font-bold px-2 py-0.5 rounded tracking-wide ${activeScholarship === idx ? "bg-cyan-500 text-slate-950 font-extrabold" : "bg-slate-800 text-cyan-400"}`}>
+                          {item.badge}
+                        </span>
+                        <h4 className="text-sm font-bold mt-1">{item.name}</h4>
+                      </div>
+                      <i data-lucide="chevron-right" className={`w-4 h-4 transition-transform duration-300 ${activeScholarship === idx ? "text-cyan-400 translate-x-1" : "text-slate-600"}`}></i>
+                    </button>
+                  ))}
+                </div>
 
-<section class="section academic-hub" id="academic-hub"><div class="container"><div class="section-head"><div><p class="eyebrow">BEU ACADEMIC HUB</p><h2>Semester-wise academic resources</h2></div><span class="date-label">Official sources first</span></div>
-<div class="hub-note"><strong>How it works:</strong> Select a programme/branch and semester below. BEU Venture provides the official BEU academic pages and a ready structure for future notes/PYQ uploads. BEU's current public syllabus page says “Will be updated soon”, so no unofficial syllabus is presented as official. <a href="https://beu-bih.ac.in/Academics/Syllabus" target="_blank" rel="noopener">Open BEU Syllabus →</a></div>
-<div class="hub-controls"><label>Programme<select id="programmeSelect"><option value="btech">B.Tech</option><option value="mtech">M.Tech</option></select></label><label>Branch / Specialization<select id="branchSelect"></select></label><label>Semester<select id="semesterSelect"></select></label></div>
-<div id="academicResult" class="academic-result"></div>
-</div></section>
+                {/* Right Animated Display Card */}
+                <div className="lg:col-span-7 bg-slate-950/90 border border-slate-800 rounded-2xl p-6 sm:p-8 relative overflow-hidden transition-all duration-500 shadow-xl group">
+                  <div className="absolute top-0 right-0 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
-<section class="section" id="beu-programmes"><div class="container"><div class="section-head"><div><p class="eyebrow">OFFICIAL PROGRAMMES</p><h2>B.Tech & M.Tech branches</h2></div></div>
-<div class="programme-grid">
-<div class="programme-card"><h3>B.Tech — 4 years</h3><p>Branches listed on the official BEU programme page.</p><div class="chip-list" id="btechBranches"></div><a class="btn secondary" href="https://beu-bih.ac.in/academics/Program/B.Tech" target="_blank" rel="noopener">View official B.Tech programmes →</a></div>
-<div class="programme-card"><h3>M.Tech — 2 years</h3><p>Specializations listed on the official BEU programme page.</p><div class="chip-list" id="mtechBranches"></div><a class="btn secondary" href="https://beu-bih.ac.in/academics/Program/M.Tech" target="_blank" rel="noopener">View official M.Tech programmes →</a></div>
-</div></div></section>
+                  <div className="space-y-5 relative z-10">
+                    <div className="flex items-center justify-between">
+                      <span className="text-[10px] font-extrabold font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 px-3 py-1 rounded-full uppercase tracking-wider">
+                        {scholarshipCategories[activeScholarship].badge}
+                      </span>
+                      <span className="text-xs text-emerald-400 font-semibold flex items-center gap-1.5">
+                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Active Portal
+                      </span>
+                    </div>
 
-<section class="section alt" id="beu-notices"><div class="container"><div class="section-head"><div><p class="eyebrow">OFFICIAL BEU</p><h2>Exam schedules & notices</h2></div></div><div class="link-grid">
-<a class="link-card" href="https://beu-bih.ac.in/examination/examination-schedule" target="_blank" rel="noopener"><span>🗓️</span><strong>BEU Examination Schedule</strong><small>Official semester examination programmes and notices</small><b>Open →</b></a>
-<a class="link-card" href="https://beu-bih.ac.in/" target="_blank" rel="noopener"><span>📢</span><strong>BEU Official Website</strong><small>Latest notices, announcements and university updates</small><b>Open →</b></a>
-<a class="link-card" href="https://beu-bih.ac.in/downloads" target="_blank" rel="noopener"><span>⬇️</span><strong>BEU Downloads</strong><small>Official circulars, notifications and downloadable documents</small><b>Open →</b></a>
-<a class="link-card" href="https://beu-bih.ac.in/links" target="_blank" rel="noopener"><span>🔗</span><strong>BEU Important Links</strong><small>Official university links and notices</small><b>Open →</b></a>
-</div></div></section>
+                    <div className="space-y-2">
+                      <h3 className="text-xl font-bold text-white tracking-tight">
+                        {scholarshipCategories[activeScholarship].name}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                        {scholarshipCategories[activeScholarship].desc}
+                      </p>
+                    </div>
 
-<section class="section" id="free-resources"><div class="container"><div class="section-head"><div><p class="eyebrow">FREE & LEGITIMATE</p><h2>Study resources by need</h2></div></div><div class="resource-table">
-<div><strong>Electrical Engineering</strong><span>Machines • Power Systems • Power Electronics • Control • Measurements</span><a href="https://nptel.ac.in/courses" target="_blank" rel="noopener">NPTEL Courses →</a></div>
-<div><strong>Programming / CSE</strong><span>Programming • Data Structures • Networks • AI/ML</span><a href="https://swayam.gov.in/explorer" target="_blank" rel="noopener">SWAYAM Courses →</a></div>
-<div><strong>Mathematics & Engineering Science</strong><span>Calculus • Linear Algebra • Physics • Chemistry</span><a href="https://ocw.mit.edu/search/?d=Engineering" target="_blank" rel="noopener">MIT OpenCourseWare →</a></div>
-<div><strong>Competitive Exams</strong><span>GATE syllabus and previous papers from the official portal</span><a href="https://gate2027.iitm.ac.in/" target="_blank" rel="noopener">GATE 2027 →</a></div>
-</div><p class="small-note">BEU Venture original notes can be added later under each subject. External copyrighted PDFs are not re-uploaded without permission.</p></div></section>
+                    {/* Features list */}
+                    <div className="space-y-2 pt-2">
+                      <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block">Key Benefits</span>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {scholarshipCategories[activeScholarship].features.map((feat, fIdx) => (
+                          <div key={fIdx} className="bg-slate-900/80 border border-slate-800 p-2.5 rounded-xl text-xs text-slate-300 flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shrink-0"></span>
+                            <span>{feat}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
 
-<section class="section alt" id="interview-bank"><div class="container"><div class="section-head"><div><p class="eyebrow">INTERVIEW BANK</p><h2>What can be asked?</h2></div></div><div class="question-grid">
-<div class="question-card"><h3>HR — Common Questions</h3><ol><li>Tell me about yourself.</li><li>Why should we hire you?</li><li>What are your strengths and weaknesses?</li><li>Why do you want this role/company?</li><li>Where do you see yourself in 3–5 years?</li><li>Tell us about a project you are proud of.</li><li>Describe a challenge and how you solved it.</li><li>Are you comfortable working in a team?</li></ol></div>
-<div class="question-card"><h3>Electrical — Technical</h3><ol><li>State and explain Kirchhoff's laws.</li><li>Difference between AC and DC machines.</li><li>Explain transformer working and losses.</li><li>What is slip in an induction motor?</li><li>Explain torque-slip characteristics.</li><li>What is power factor and how can it be improved?</li><li>Difference between MCB, MCCB and relay.</li><li>Explain SCR, MOSFET and IGBT.</li><li>What is feedback in a control system?</li><li>Explain transmission-line losses.</li></ol></div>
-<div class="question-card"><h3>Aptitude & Communication</h3><ol><li>Percentages and profit/loss.</li><li>Ratio, proportion and averages.</li><li>Time, speed and distance.</li><li>Probability and basic statistics.</li><li>Logical reasoning and series.</li><li>Reading comprehension and grammar.</li><li>Explain your project in 60 seconds.</li><li>Give a short technical introduction.</li></ol></div>
-<div class="question-card"><h3>Resume Checklist</h3><ul><li>Keep a student resume concise.</li><li>Put skills you can actually demonstrate.</li><li>Add projects with your contribution and outcome.</li><li>Include internships/certificates only when genuine.</li><li>Check spelling, links and contact details.</li><li>Tailor the resume to the role.</li></ul></div>
-</div></div></section>
+                    <div className="pt-4 border-t border-slate-900 flex items-center justify-between">
+                      <span className="text-[11px] text-slate-500 font-mono">Secure Government Redirect</span>
+                      <a
+                        href={scholarshipCategories[activeScholarship].link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold text-xs px-5 py-3 rounded-xl shadow-lg shadow-cyan-500/20 transition-all flex items-center gap-2 group-hover:scale-105"
+                      >
+                        <span>Open Official Portal</span>
+                        <i data-lucide="external-link" className="w-4 h-4"></i>
+                      </a>
+                    </div>
+                  </div>
 
-<section class="section about" id="about"><div class="container about-box"><div><p class="eyebrow">ABOUT BEU VENTURE</p><h2>Built by students, for students.</h2><p>BEU Venture is an independent student-focused platform created to help students discover useful opportunities, resources and career-related information in one place.</p><p>We aim to make it easier for students to find internships, scholarships, examinations, hackathons, competitions and career resources.</p></div><div class="notice"><strong>Important</strong><p>BEU Venture is an independent student-run platform. It is not an official website or channel of Bihar Engineering University. Important information should always be verified from the official source before applying or taking any action.</p></div></div></section>
+                </div>
 
-<section class="cta"><div class="container cta-inner"><div><p class="eyebrow">STAY CONNECTED</p><h2>Don't miss the next opportunity.</h2><p>Get updates directly on WhatsApp and follow BEU Venture on Instagram.</p></div><div class="cta-actions"><a class="btn primary" href="https://whatsapp.com/channel/0029VbDGLDr7dmeWVgWBDT2R" target="_blank" rel="noopener">Join WhatsApp</a><a class="btn secondary" href="https://instagram.com/beuventure" target="_blank" rel="noopener">Instagram</a></div></div></section>
-</main>
-<footer class="footer"><div class="container footer-inner"><div><strong>BEU Venture — Learn • Connect • Grow</strong><span>Independent student platform. Always verify important information from the official source.</span></div><div class="footer-links"><a href="https://whatsapp.com/channel/0029VbDGLDr7dmeWVgWBDT2R" target="_blank" rel="noopener">WhatsApp</a><a href="https://instagram.com/beuventure" target="_blank" rel="noopener">Instagram</a><a href="#about">About</a><a href="mailto:beuventure@gmail.com">Contact</a></div><small>© <span id="year"></span> BEU Venture. Independent student community.</small></div></footer>
-<script src="script.js"></script>
-</body></html>
+              </div>
+            </section>
+
+            {/* 2: LATEST (STUDENT UPDATES) */}
+            <section id="updates" className="space-y-6">
+              <div className="flex justify-between items-end border-b border-slate-800/80 pb-4">
+                <div>
+                  <span className="text-xs font-bold text-cyan-400 tracking-wider uppercase">LATEST</span>
+                  <h2 className="text-2xl font-bold text-white tracking-tight mt-1">Student Updates</h2>
+                </div>
+                <span className="text-xs text-slate-500 font-medium">Updated regularly</span>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {studentUpdates
+                  .filter(item => item.title.toLowerCase().includes(searchQuery.toLowerCase()) || item.desc.toLowerCase().includes(searchQuery.toLowerCase()))
+                  .map((item, idx) => (
+                    <article
+                      key={idx}
+                      onMouseMove={handleMouseMove}
+                      onMouseLeave={handleMouseLeave}
+                      className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 backdrop-blur-md relative overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:border-cyan-500/40"
+                    >
+                      <div>
+                        <div className="flex items-center justify-between mb-4">
+                          <div className="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 flex items-center justify-center group-hover:bg-cyan-500 group-hover:text-slate-950 transition-colors">
+                            <i data-lucide={item.icon} className="w-5 h-5"></i>
+                          </div>
+                          <span className="text-[10px] font-bold bg-slate-800 text-cyan-400 border border-slate-700 px-2 py-0.5 rounded tracking-wider">
+                            {item.badge}
+                          </span>
+                        </div>
+                        <h3 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors">{item.title}</h3>
+                        <p className="text-xs text-slate-400 leading-relaxed mb-6">{item.desc}</p>
+                      </div>
+                      <a
+                        href={item.link}
+                        target={item.target || "_blank"}
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition-colors"
+                      >
+                        <span>Explore</span>
+                        <i data-lucide="arrow-right" className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform"></i>
+                      </a>
+                    </article>
+                ))}
+              </div>
+            </section>
+
+            {/* 3: DISCOVER (OPPORTUNITIES & COMPETITIONS) */}
+            <section id="opportunities" className="space-y-6">
+              <div className="border-b border-slate-800/80 pb-4">
+                <span className="text-xs font-bold text-cyan-400 tracking-wider uppercase">DISCOVER</span>
+                <h2 className="text-2xl font-bold text-white tracking-tight mt-1">Opportunities & Competitions</h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {opportunities.map((item, idx) => (
+                  <article
+                    key={idx}
+                    onMouseMove={handleMouseMove}
+                    onMouseLeave={handleMouseLeave}
+                    className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 backdrop-blur-md relative overflow-hidden flex flex-col justify-between group transition-all hover:border-cyan-500/40"
+                  >
+                    <div>
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center">
+                          <i data-lucide={item.icon} className="w-5 h-5"></i>
+                        </div>
+                        <span className="text-[10px] font-bold bg-slate-800 text-slate-300 border border-slate-700 px-2 py-0.5 rounded">
+                          {item.badge}
+                        </span>
+                      </div>
+                      <h3 className="text-base font-bold text-white mb-2">{item.title}</h3>
+                      <p className="text-xs text-slate-400 leading-relaxed mb-6">{item.desc}</p>
+                    </div>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition-colors"
+                    >
+                      <span>Open Official Link</span>
+                      <i data-lucide="external-link" className="w-3.5 h-3.5"></i>
+                    </a>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            {/* 4: ACADEMICS (BEU ACADEMIC HUB) */}
+            <section id="academics" className="space-y-6">
+              <div className="border-b border-slate-800/80 pb-4">
+                <span className="text-xs font-bold text-cyan-400 tracking-wider uppercase">ACADEMICS</span>
+                <h2 className="text-2xl font-bold text-white tracking-tight mt-1">BEU Academic Hub</h2>
+                <p className="text-xs text-slate-400 mt-1">Official sources, syllabi, previous year papers, and free study platforms.</p>
+              </div>
+              <div className="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-xl space-y-6">
+                <div className="flex flex-wrap gap-2 border-b border-slate-800 pb-4">
+                  {[
+                    { id: "results", label: "BEU Results & Exam" },
+                    { id: "syllabus", label: "Syllabus & Programmes" },
+                    { id: "learning", label: "Free Learning Platforms" }
+                  ].map((tab) => (
+                    <button
+                      key={tab.id}
+                      onClick={() => setAcademicTab(tab.id)}
+                      className={`px-4 py-2 rounded-xl text-xs font-semibold transition-all ${
+                        academicTab === tab.id
+                          ? "bg-cyan-500 text-slate-950 font-bold shadow-md shadow-cyan-500/20"
+                          : "bg-slate-950 text-slate-400 hover:text-white border border-slate-800"
+                      }`}
+                    >
+                      {tab.label}
+                    </button>
+                  ))}
+                </div>
+                {academicTab === "results" && (
+                  <div className="space-y-4">
+                    <p className="text-xs text-slate-400">Use the official BEU portal to check available semester results.</p>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <a href="https://beu-bih.ac.in/result-one" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-950 border border-slate-800 hover:border-cyan-500/50 rounded-xl flex items-center justify-between group">
+                        <div>
+                          <h4 className="text-xs font-bold text-white group-hover:text-cyan-400">BEU Official Result Portal</h4>
+                          <p className="text-[11px] text-slate-500 mt-0.5">Semester-wise B.Tech results</p>
+                        </div>
+                        <i data-lucide="external-link" className="w-4 h-4 text-slate-500 group-hover:text-cyan-400"></i>
+                      </a>
+                      <a href="https://beu-bih.ac.in/examination/examination-schedule" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-950 border border-slate-800 hover:border-cyan-500/50 rounded-xl flex items-center justify-between group">
+                        <div>
+                          <h4 className="text-xs font-bold text-white group-hover:text-cyan-400">Exam Schedule</h4>
+                          <p className="text-[11px] text-slate-500 mt-0.5">Official exam notices & time tables</p>
+                        </div>
+                        <i data-lucide="external-link" className="w-4 h-4 text-slate-500 group-hover:text-cyan-400"></i>
+                      </a>
+                      <a href="https://beu-bih.ac.in/downloads" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-950 border border-slate-800 hover:border-cyan-500/50 rounded-xl flex items-center justify-between group">
+                        <div>
+                          <h4 className="text-xs font-bold text-white group-hover:text-cyan-400">BEU Downloads</h4>
+                          <p className="text-[11px] text-slate-500 mt-0.5">Circulars & official PDFs</p>
+                        </div>
+                        <i data-lucide="external-link" className="w-4 h-4 text-slate-500 group-hover:text-cyan-400"></i>
+                      </a>
+                    </div>
+                  </div>
+                )}
+                {academicTab === "syllabus" && (
+                  <div className="space-y-4">
+                    <p className="text-xs text-slate-400">Access official syllabus links directly from Bihar Engineering University.</p>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                      <a href="https://beu-bih.ac.in/Syllabus.aspx" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-950 border border-slate-800 hover:border-cyan-500/50 rounded-xl flex items-center justify-between group">
+                        <div>
+                          <h4 className="text-xs font-bold text-white group-hover:text-cyan-400">BEU Syllabus Portal</h4>
+                          <p className="text-[11px] text-slate-500 mt-0.5">Branch-wise official B.Tech syllabus</p>
+                        </div>
+                        <i data-lucide="external-link" className="w-4 h-4 text-slate-500 group-hover:text-cyan-400"></i>
+                      </a>
+                      <a href="https://beu-bih.ac.in/academics/Program/B.Tech" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-950 border border-slate-800 hover:border-cyan-500/50 rounded-xl flex items-center justify-between group">
+                        <div>
+                          <h4 className="text-xs font-bold text-white group-hover:text-cyan-400">B.Tech Programmes (4 Yrs)</h4>
+                          <p className="text-[11px] text-slate-500 mt-0.5">List of affiliated branches</p>
+                        </div>
+                        <i data-lucide="external-link" className="w-4 h-4 text-slate-500 group-hover:text-cyan-400"></i>
+                      </a>
+                      <a href="https://beu-bih.ac.in/academics/Program/M.Tech" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-950 border border-slate-800 hover:border-cyan-500/50 rounded-xl flex items-center justify-between group">
+                        <div>
+                          <h4 className="text-xs font-bold text-white group-hover:text-cyan-400">M.Tech Programmes (2 Yrs)</h4>
+                          <p className="text-[11px] text-slate-500 mt-0.5">Postgraduate specializations</p>
+                        </div>
+                        <i data-lucide="external-link" className="w-4 h-4 text-slate-500 group-hover:text-cyan-400"></i>
+                      </a>
+                    </div>
+                  </div>
+                )}
+                {academicTab === "learning" && (
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <a href="https://nptel.ac.in/" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-950 border border-slate-800 hover:border-cyan-500/50 rounded-xl flex items-center justify-between group">
+                      <div>
+                        <h4 className="text-xs font-bold text-white group-hover:text-cyan-400">NPTEL IIT Courses</h4>
+                        <p className="text-[11px] text-slate-500 mt-0.5">Free online courses from IITs & IISc</p>
+                      </div>
+                      <i data-lucide="external-link" className="w-4 h-4 text-slate-500 group-hover:text-cyan-400"></i>
+                    </a>
+                    <a href="https://swayam.gov.in/" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-950 border border-slate-800 hover:border-cyan-500/50 rounded-xl flex items-center justify-between group">
+                      <div>
+                        <h4 className="text-xs font-bold text-white group-hover:text-cyan-400">SWAYAM Govt Portal</h4>
+                        <p className="text-[11px] text-slate-500 mt-0.5">Higher education online courses</p>
+                      </div>
+                      <i data-lucide="external-link" className="w-4 h-4 text-slate-500 group-hover:text-cyan-400"></i>
+                    </a>
+                    <a href="https://ocw.mit.edu/" target="_blank" rel="noopener noreferrer" className="p-4 bg-slate-950 border border-slate-800 hover:border-cyan-500/50 rounded-xl flex items-center justify-between group">
+                      <div>
+                        <h4 className="text-xs font-bold text-white group-hover:text-cyan-400">MIT OpenCourseWare</h4>
+                        <p className="text-[11px] text-slate-500 mt-0.5">Global lecture notes & materials</p>
+                      </div>
+                      <i data-lucide="external-link" className="w-4 h-4 text-slate-500 group-hover:text-cyan-400"></i>
+                    </a>
+                  </div>
+                )}
+              </div>
+            </section>
+
+            {/* 5: CAREER & EXAMS (GOVT PORTALS) */}
+            <section id="gov-exams" className="space-y-6">
+              <div className="border-b border-slate-800/80 pb-4">
+                <span className="text-xs font-bold text-cyan-400 tracking-wider uppercase">CAREER & EXAMS</span>
+                <h2 className="text-2xl font-bold text-white tracking-tight mt-1">Government & Competitive Portals</h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {govtExams.map((item, idx) => (
+                  <article
+                    key={idx}
+                    onMouseMove={handleMouseMove}
+                    onMouseLeave={handleMouseLeave}
+                    className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 backdrop-blur-md relative overflow-hidden flex flex-col justify-between group transition-all hover:border-cyan-500/40"
+                  >
+                    <div>
+                      <div className="w-10 h-10 rounded-xl bg-slate-800 text-cyan-400 flex items-center justify-center mb-4">
+                        <i data-lucide={item.icon} className="w-5 h-5"></i>
+                      </div>
+                      <h3 className="text-base font-bold text-white mb-2">{item.title}</h3>
+                      <p className="text-xs text-slate-400 leading-relaxed mb-6">{item.desc}</p>
+                    </div>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition-colors"
+                    >
+                      <span>Open Portal</span>
+                      <i data-lucide="external-link" className="w-3.5 h-3.5"></i>
+                    </a>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            {/* 6: PLACEMENT PREP (BRANCH-WISE QUESTION BANK HUB) */}
+            <section id="career" className="space-y-6">
+              <div className="border-b border-slate-800/80 pb-4">
+                <span className="text-xs font-bold text-cyan-400 tracking-wider uppercase">PLACEMENT PREP</span>
+                <h2 className="text-2xl font-bold text-white tracking-tight mt-1">Branch-wise Interview Question Bank</h2>
+                <p className="text-xs text-slate-400 mt-1">Select your engineering branch below to load branch-specific core technical questions and preparation topics.</p>
+              </div>
+
+              <div className="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                {/* Left Branch Selection Buttons */}
+                <div className="lg:col-span-4 space-y-2.5">
+                  <span className="text-[10px] font-extrabold text-slate-500 uppercase tracking-widest block px-1 mb-1">Select Your Branch</span>
+                  {placementBranches.map((branch, idx) => (
+                    <button
+                      key={branch.id}
+                      onClick={() => setActivePlacementBranch(idx)}
+                      className={`w-full text-left p-4 rounded-2xl transition-all duration-300 flex items-center justify-between border ${
+                        activePlacementBranch === idx
+                          ? "bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-500/60 shadow-lg shadow-cyan-500/10 text-white translate-x-1"
+                          : "bg-slate-950/60 border-slate-800/80 text-slate-400 hover:text-slate-200 hover:bg-slate-900"
+                      }`}
+                    >
+                      <div className="space-y-0.5">
+                        <span className={`text-[9px] font-bold px-2 py-0.5 rounded tracking-wide ${activePlacementBranch === idx ? "bg-cyan-500 text-slate-950 font-extrabold" : "bg-slate-800 text-cyan-400"}`}>
+                          {branch.badge}
+                        </span>
+                        <h4 className="text-xs sm:text-sm font-bold mt-1.5">{branch.name}</h4>
+                      </div>
+                      <i data-lucide="chevron-right" className={`w-4 h-4 transition-transform duration-300 ${activePlacementBranch === idx ? "text-cyan-400 translate-x-1" : "text-slate-600"}`}></i>
+                    </button>
+                  ))}
+                </div>
+
+                {/* Right Branch Questions Display Container */}
+                <div className="lg:col-span-8 bg-slate-950/90 border border-slate-800 rounded-2xl p-6 sm:p-8 relative overflow-hidden transition-all duration-500 shadow-xl">
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                  <div className="space-y-6 relative z-10">
+                    <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-900 pb-4">
+                      <div>
+                        <span className="text-[10px] font-extrabold font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 px-3 py-1 rounded-full uppercase tracking-wider">
+                          {placementBranches[activePlacementBranch].badge}
+                        </span>
+                        <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight mt-2">
+                          {placementBranches[activePlacementBranch].name} Question Bank
+                        </h3>
+                      </div>
+                      <span className="text-xs text-slate-400 bg-slate-900 px-3 py-1 rounded-lg border border-slate-800 font-mono">
+                        Core Technical Prep
+                      </span>
+                    </div>
+
+                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                      {placementBranches[activePlacementBranch].desc}
+                    </p>
+
+                    {/* Question Cards Grid */}
+                    <div className="space-y-3 pt-2">
+                      <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block">Key Interview Topics & Questions</span>
+                      <div className="grid grid-cols-1 gap-3">
+                        {placementBranches[activePlacementBranch].questions.map((qItem, qIdx) => (
+                          <div key={qIdx} className="bg-slate-900/90 border border-slate-800 hover:border-cyan-500/40 p-4 rounded-xl transition-all space-y-1 group">
+                            <div className="flex items-center gap-2">
+                              <i data-lucide="check-circle-2" className="w-4 h-4 text-cyan-400 shrink-0 group-hover:scale-110 transition-transform"></i>
+                              <h5 className="text-xs sm:text-sm font-bold text-white">{qItem.title}</h5>
+                            </div>
+                            <p className="text-xs text-slate-400 pl-6 leading-relaxed">
+                              {qItem.desc}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="pt-4 border-t border-slate-900 flex items-center justify-between text-xs text-slate-400">
+                      <span>💡 Practice these concepts thoroughly for campus drives & core company interviews.</span>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </section>
+
+            {/* SECTION 7: ABOUT BEU VENTURE */}
+            <section id="about" className="space-y-6 pt-4">
+              <div className="border-b border-slate-800/80 pb-4">
+                <span className="text-xs font-bold text-cyan-400 tracking-wider uppercase">ABOUT BEU VENTURE</span>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight mt-1">
+                  Built by students, for students.
+                </h2>
+              </div>
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                <div className="lg:col-span-7 space-y-4 text-slate-300 text-sm leading-relaxed">
+                  <p>
+                    <strong className="text-white">BEU Venture</strong> is an independent student-focused platform created to help students discover useful opportunities, resources, and career-related information in one place.
+                  </p>
+                  <p>
+                    We aim to make it easier for Bihar Engineering University students to find scholarships, internships, examinations, hackathons, competitions, and career resources without digging through multiple websites.
+                  </p>
+                </div>
+                <div className="lg:col-span-5 bg-amber-500/10 border border-amber-500/30 rounded-2xl p-6 relative overflow-hidden backdrop-blur-md">
+                  <div className="flex items-center gap-2 text-amber-400 font-bold text-sm mb-2">
+                    <i data-lucide="alert-circle" className="w-4 h-4"></i>
+                    <span>Important Note</span>
+                  </div>
+                  <p className="text-xs text-amber-200/90 leading-relaxed">
+                    BEU Venture is an independent student-run platform. It is not an official website or channel of Bihar Engineering University. Important information should always be verified from the official source before applying or taking any action.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+          </main>
+
+          {/* FOOTER */}
+          <footer className="bg-slate-950 border-t border-slate-800/80 mt-16 py-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-slate-900">
+                <div>
+                  <h3 className="text-sm font-bold text-white flex items-center gap-2">
+                    BEU Venture <span className="text-slate-500 font-normal">— Learn • Connect • Grow</span>
+                  </h3>
+                  <p className="text-xs text-slate-500 mt-1">
+                    Independent student platform. Always verify important information from the official source.
+                  </p>
+                </div>
+                <div className="flex items-center gap-6 text-xs font-medium text-slate-400">
+                  <a href="https://whatsapp.com/channel/0029VbDGLDr7dmeWVgWBDT2R" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">WhatsApp</a>
+                  <a href="https://instagram.com/beuventure" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 transition-colors">Instagram</a>
+                  <a href="#about" className="hover:text-cyan-400 transition-colors">About</a>
+                  <a href="mailto:beuventure@gmail.com" className="hover:text-cyan-400 transition-colors">Contact</a>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-600 gap-2">
+                <p>© 2026 BEU Venture. Independent student community.</p>
+                <p>Designed for Bihar Engineering University Students.</p>
+              </div>
+            </div>
+          </footer>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+  </script>
+</body>
+</html>  
+<!-- Floating AI Assistant Widget -->
+<div id="ai-assistant-container" class="fixed bottom-6 right-6 z-50 font-sans">
+  
+  <!-- Chat Trigger Button -->
+  <button id="ai-chat-toggle" class="bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-4 rounded-full shadow-2xl hover:scale-105 transition-transform flex items-center justify-center group relative">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+    </svg>
+    <span class="absolute -top-1 -right-1 bg-red-500 w-3 h-3 rounded-full animate-pulse"></span>
+  </button>
+
+  <!-- Chat Window (Hidden by Default) -->
+  <div id="ai-chat-window" class="hidden absolute bottom-16 right-0 w-80 sm:w-96 bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden flex flex-col h-[450px]">
+    
+    <!-- Chat Header -->
+    <div class="bg-slate-800 p-4 border-b border-slate-700 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-3 h-3 bg-green-500 rounded-full animate-ping"></div>
+        <div>
+          <h3 class="text-white font-bold text-sm">Study Assistant AI</h3>
+          <p class="text-slate-400 text-xs">Ask anything about exams & updates</p>
+        </div>
+      </div>
+      <button id="ai-chat-close" class="text-slate-400 hover:text-white text-lg font-bold px-2">&times;</button>
+    </div>
+
+    <!-- Chat Messages Body -->
+    <div id="ai-chat-messages" class="p-4 flex-1 overflow-y-auto space-y-3 text-sm text-slate-200">
+      <div class="bg-slate-800 p-3 rounded-xl max-w-[85%] border border-slate-700">
+        Hello! 👋 Main aapka AI assistant hoon. Aapko Scholarships, Govt Exams, Placement Prep ya Academics se jude kisi bhi sawal me madad chahiye toh batayein!
+      </div>
+    </div>
+
+    <!-- Quick Suggestion Chips -->
+    <div class="px-3 py-2 bg-slate-900/50 flex gap-2 overflow-x-auto no-scrollbar border-t border-slate-800 text-xs">
+      <button onclick="sendPresetMessage('Latest Govt Exams kya hain?')" class="bg-slate-800 hover:bg-slate-700 text-cyan-400 px-3 py-1 rounded-full whitespace-nowrap border border-slate-700 transition-colors">Govt Exams 🏛️</button>
+      <button onclick="sendPresetMessage('Placement Prep ke liye kya karein?')" class="bg-slate-800 hover:bg-slate-700 text-cyan-400 px-3 py-1 rounded-full whitespace-nowrap border border-slate-700 transition-colors">Placement Prep 💻</button>
+      <button onclick="sendPresetMessage('Scholarships ki jankari do')" class="bg-slate-800 hover:bg-slate-700 text-cyan-400 px-3 py-1 rounded-full whitespace-nowrap border border-slate-700 transition-colors">Scholarships 🎓</button>
+    </div>
+
+    <!-- Chat Input Form -->
+    <div class="p-3 bg-slate-800 border-t border-slate-700 flex items-center gap-2">
+      <input type="text" id="ai-chat-input" placeholder="Yahan apna sawal likhein..." class="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
+      <button id="ai-chat-send" class="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg text-xs font-semibold transition-colors">Send</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- Chat Widget Script -->
+<script>
+  const toggleBtn = document.getElementById('ai-chat-toggle');
+  const closeBtn = document.getElementById('ai-chat-close');
+  const chatWindow = document.getElementById('ai-chat-window');
+  const sendBtn = document.getElementById('ai-chat-send');
+  const inputField = document.getElementById('ai-chat-input');
+  const messagesContainer = document.getElementById('ai-chat-messages');
+
+  // Toggle Chat Window Open/Close
+  toggleBtn.addEventListener('click', () => {
+    chatWindow.classList.toggle('hidden');
+  });
+  closeBtn.addEventListener('click', () => {
+    chatWindow.classList.add('hidden');
+  });
+
+  // Handle Send Message
+  function handleSendMessage() {
+    const text = inputField.value.trim();
+    if (!text) return;
+
+    // User Message Append
+    appendMessage(text, 'user');
+    inputField.value = '';
+
+    // Simulated AI Response (Aap ise apne backend API ya LLM se connect kar sakte hain)
+    setTimeout(() => {
+      let botReply = "Aapke is sawal ke liye jald hi update yahan list ki jayegi. Aap upar diye gaye sections (Academics, Placement Prep, Govt Exams) ko check kar sakte hain!";
+      
+      const lowerText = text.toLowerCase();
+      if(lowerText.includes('exam') || lowerText.includes('govt')) {
+        botReply = "Govt Exams section me aapko latest competition exams, syllabus, aur preparation material mil jayega.";
+      } else if(lowerText.includes('placement') || lowerText.includes('prep')) {
+        botReply = "Placement Prep ke liye coding resources, aptitude tests, aur mock interviews ki details jald hi update ho rahi hain!";
+      } else if(lowerText.includes('scholarship')) {
+        botReply = "Scholarships section me current open scholarships aur unki eligibility criteria ki puri jankari di gayi hai.";
+      }
+
+      appendMessage(botReply, 'bot');
+    }, 600);
+  }
+
+  function appendMessage(text, sender) {
+    const msgDiv = document.createElement('div');
+    if(sender === 'user') {
+      msgDiv.className = "bg-cyan-600 text-white p-3 rounded-xl ml-auto max-w-[85%] text-xs shadow-md";
+    } else {
+      msgDiv.className = "bg-slate-800 text-slate-200 p-3 rounded-xl mr-auto max-w-[85%] text-xs border border-slate-700 shadow-md";
+    }
+    msgDiv.innerText = text;
+    messagesContainer.appendChild(msgDiv);
+    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  }
+
+  window.sendPresetMessage = function(presetText) {
+    inputField.value = presetText;
+    handleSendMessage();
+  }
+
+  sendBtn.addEventListener('click', handleSendMessage);
+  inputField.addEventListener('keypress', (e) => {
+    if(e.key === 'Enter') handleSendMessage();
+  });
+</script>
