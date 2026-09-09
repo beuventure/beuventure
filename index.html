@@ -90,7 +90,6 @@
   <div id="root"></div>
   <script type="text/babel">
     const { useState, useEffect } = React;
-
     // Scholarship Sub-Categories Data
     const scholarshipCategories = [
       {
@@ -126,7 +125,6 @@
         features: ["Rs. 50,000 Per Annum Support", "Exclusively for Girls & Divyang", "Tuition Fee & Book Grant"]
       }
     ];
-
     // Branch-wise Placement & Interview Questions Data
     const placementBranches = [
       {
@@ -190,7 +188,6 @@
         ]
       }
     ];
-
     const studentUpdates = [
       {
         badge: "SCHOLARSHIP",
@@ -241,7 +238,6 @@
         target: "_self"
       }
     ];
-
     const opportunities = [
       {
         title: "AICTE Internship Portal",
@@ -272,7 +268,6 @@
         icon: "book-open"
       }
     ];
-
     const govtExams = [
       { title: "GATE Official Portal", desc: "IIT GATE portal for official question papers, syllabus, & registration.", link: "https://gate2027.iitm.ac.in/", icon: "cpu" },
       { title: "UPSC / ESE", desc: "Engineering Services Examination (ESE), active exams & PYQs.", link: "https://www.upsc.gov.in/examinations/active-exams", icon: "building" },
@@ -281,19 +276,16 @@
       { title: "BTSC Technical", desc: "Bihar Technical Service Commission official recruitment notices.", link: "https://btsc.bihar.gov.in/", icon: "wrench" },
       { title: "Indian Railways (RRB JE)", desc: "Official recruitment updates and JE/SSE notices via RRB.", link: "https://indianrailways.gov.in/", icon: "train" }
     ];
-
     function App() {
       const [academicTab, setAcademicTab] = useState("results");
       const [searchQuery, setSearchQuery] = useState("");
       const [activeScholarship, setActiveScholarship] = useState(0);
       const [activePlacementBranch, setActivePlacementBranch] = useState(0);
-
       useEffect(() => {
         if (window.lucide) {
           window.lucide.createIcons();
         }
       }, [activeScholarship, activePlacementBranch, academicTab]);
-
       const handleMouseMove = (e) => {
         const card = e.currentTarget;
         const rect = card.getBoundingClientRect();
@@ -308,7 +300,6 @@
           { duration: 200, fill: "forwards" }
         );
       };
-
       const handleMouseLeave = (e) => {
         e.currentTarget.animate(
           [
@@ -319,7 +310,6 @@
           { duration: 400, fill: "forwards" }
         );
       };
-
       return (
         <div className="min-h-screen flex flex-col justify-between bg-slate-950">
           
@@ -368,7 +358,6 @@
               </a>
             </div>
           </header>
-
           {/* MAIN CONTENT */}
           <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full space-y-16">
             
@@ -398,7 +387,6 @@
                     />
                   </div>
                 </div>
-
                 <div className="flex flex-wrap gap-4 pt-2 justify-center sm:justify-start">
                   <a
                     href="#scholarships-section"
@@ -419,7 +407,6 @@
                 </div>
               </div>
             </section>
-
             {/* 1: FINANCIAL AID HUB (SCHOLARSHIPS) */}
             <section id="scholarships-section" className="space-y-6">
               <div className="border-b border-slate-800/80 pb-4">
@@ -427,7 +414,6 @@
                 <h2 className="text-2xl font-bold text-white tracking-tight mt-1">Scholarships & Student Credit Schemes</h2>
                 <p className="text-xs text-slate-400 mt-1">Click below to switch between SC/ST, BC/EBC, NSP, and DRCC Student Credit Card portals.</p>
               </div>
-
               <div className="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 
                 {/* Left Tabs selection list */}
@@ -452,11 +438,9 @@
                     </button>
                   ))}
                 </div>
-
                 {/* Right Animated Display Card */}
                 <div className="lg:col-span-7 bg-slate-950/90 border border-slate-800 rounded-2xl p-6 sm:p-8 relative overflow-hidden transition-all duration-500 shadow-xl group">
                   <div className="absolute top-0 right-0 w-48 h-48 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
                   <div className="space-y-5 relative z-10">
                     <div className="flex items-center justify-between">
                       <span className="text-[10px] font-extrabold font-mono bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 px-3 py-1 rounded-full uppercase tracking-wider">
@@ -466,7 +450,6 @@
                         <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Active Portal
                       </span>
                     </div>
-
                     <div className="space-y-2">
                       <h3 className="text-xl font-bold text-white tracking-tight">
                         {scholarshipCategories[activeScholarship].name}
@@ -475,7 +458,6 @@
                         {scholarshipCategories[activeScholarship].desc}
                       </p>
                     </div>
-
                     {/* Features list */}
                     <div className="space-y-2 pt-2">
                       <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block">Key Benefits</span>
@@ -488,7 +470,6 @@
                         ))}
                       </div>
                     </div>
-
                     <div className="pt-4 border-t border-slate-900 flex items-center justify-between">
                       <span className="text-[11px] text-slate-500 font-mono">Secure Government Redirect</span>
                       <a
@@ -502,12 +483,9 @@
                       </a>
                     </div>
                   </div>
-
                 </div>
-
               </div>
             </section>
-
             {/* 2: LATEST (STUDENT UPDATES) */}
             <section id="updates" className="space-y-6">
               <div className="flex justify-between items-end border-b border-slate-800/80 pb-4">
@@ -552,7 +530,6 @@
                 ))}
               </div>
             </section>
-
             {/* 3: DISCOVER (OPPORTUNITIES & COMPETITIONS) */}
             <section id="opportunities" className="space-y-6">
               <div className="border-b border-slate-800/80 pb-4">
@@ -592,7 +569,6 @@
                 ))}
               </div>
             </section>
-
             {/* 4: ACADEMICS (BEU ACADEMIC HUB) */}
             <section id="academics" className="space-y-6">
               <div className="border-b border-slate-800/80 pb-4">
@@ -703,7 +679,6 @@
                 )}
               </div>
             </section>
-
             {/* 5: CAREER & EXAMS (GOVT PORTALS) */}
             <section id="gov-exams" className="space-y-6">
               <div className="border-b border-slate-800/80 pb-4">
@@ -738,7 +713,6 @@
                 ))}
               </div>
             </section>
-
             {/* 6: PLACEMENT PREP (BRANCH-WISE QUESTION BANK HUB) */}
             <section id="career" className="space-y-6">
               <div className="border-b border-slate-800/80 pb-4">
@@ -746,7 +720,6 @@
                 <h2 className="text-2xl font-bold text-white tracking-tight mt-1">Branch-wise Interview Question Bank</h2>
                 <p className="text-xs text-slate-400 mt-1">Select your engineering branch below to load branch-specific core technical questions and preparation topics.</p>
               </div>
-
               <div className="bg-slate-900/80 border border-slate-800 rounded-3xl p-6 sm:p-8 backdrop-blur-xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                 
                 {/* Left Branch Selection Buttons */}
@@ -772,11 +745,9 @@
                     </button>
                   ))}
                 </div>
-
                 {/* Right Branch Questions Display Container */}
                 <div className="lg:col-span-8 bg-slate-950/90 border border-slate-800 rounded-2xl p-6 sm:p-8 relative overflow-hidden transition-all duration-500 shadow-xl">
                   <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
                   <div className="space-y-6 relative z-10">
                     <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-900 pb-4">
                       <div>
@@ -791,11 +762,9 @@
                         Core Technical Prep
                       </span>
                     </div>
-
                     <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                       {placementBranches[activePlacementBranch].desc}
                     </p>
-
                     {/* Question Cards Grid */}
                     <div className="space-y-3 pt-2">
                       <span className="text-[10px] font-bold text-slate-500 uppercase tracking-widest block">Key Interview Topics & Questions</span>
@@ -813,17 +782,13 @@
                         ))}
                       </div>
                     </div>
-
                     <div className="pt-4 border-t border-slate-900 flex items-center justify-between text-xs text-slate-400">
                       <span>💡 Practice these concepts thoroughly for campus drives & core company interviews.</span>
                     </div>
                   </div>
-
                 </div>
-
               </div>
             </section>
-
             {/* SECTION 7: ABOUT BEU VENTURE */}
             <section id="about" className="space-y-6 pt-4">
               <div className="border-b border-slate-800/80 pb-4">
@@ -852,9 +817,7 @@
                 </div>
               </div>
             </section>
-
           </main>
-
           {/* FOOTER */}
           <footer className="bg-slate-950 border-t border-slate-800/80 mt-16 py-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
@@ -883,7 +846,6 @@
         </div>
       );
     }
-
     const root = ReactDOM.createRoot(document.getElementById("root"));
     root.render(<App />);
   </script>
@@ -899,7 +861,6 @@
     </svg>
     <span class="absolute -top-1 -right-1 bg-red-500 w-3 h-3 rounded-full animate-pulse"></span>
   </button>
-
   <!-- Chat Window (Hidden by Default) -->
   <div id="ai-chat-window" class="hidden absolute bottom-16 right-0 w-80 sm:w-96 bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden flex flex-col h-[450px]">
     
@@ -914,30 +875,25 @@
       </div>
       <button id="ai-chat-close" class="text-slate-400 hover:text-white text-lg font-bold px-2">&times;</button>
     </div>
-
     <!-- Chat Messages Body -->
     <div id="ai-chat-messages" class="p-4 flex-1 overflow-y-auto space-y-3 text-sm text-slate-200">
       <div class="bg-slate-800 p-3 rounded-xl max-w-[85%] border border-slate-700">
         Hello! 👋 Main aapka AI assistant hoon. Aapko Scholarships, Govt Exams, Placement Prep ya Academics se jude kisi bhi sawal me madad chahiye toh batayein!
       </div>
     </div>
-
     <!-- Quick Suggestion Chips -->
     <div class="px-3 py-2 bg-slate-900/50 flex gap-2 overflow-x-auto no-scrollbar border-t border-slate-800 text-xs">
       <button onclick="sendPresetMessage('Latest Govt Exams kya hain?')" class="bg-slate-800 hover:bg-slate-700 text-cyan-400 px-3 py-1 rounded-full whitespace-nowrap border border-slate-700 transition-colors">Govt Exams 🏛️</button>
       <button onclick="sendPresetMessage('Placement Prep ke liye kya karein?')" class="bg-slate-800 hover:bg-slate-700 text-cyan-400 px-3 py-1 rounded-full whitespace-nowrap border border-slate-700 transition-colors">Placement Prep 💻</button>
       <button onclick="sendPresetMessage('Scholarships ki jankari do')" class="bg-slate-800 hover:bg-slate-700 text-cyan-400 px-3 py-1 rounded-full whitespace-nowrap border border-slate-700 transition-colors">Scholarships 🎓</button>
     </div>
-
     <!-- Chat Input Form -->
     <div class="p-3 bg-slate-800 border-t border-slate-700 flex items-center gap-2">
       <input type="text" id="ai-chat-input" placeholder="Yahan apna sawal likhein..." class="flex-1 bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-cyan-500">
       <button id="ai-chat-send" class="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg text-xs font-semibold transition-colors">Send</button>
     </div>
-
   </div>
 </div>
-
 <!-- Chat Widget Script -->
 <script>
   const toggleBtn = document.getElementById('ai-chat-toggle');
@@ -946,7 +902,6 @@
   const sendBtn = document.getElementById('ai-chat-send');
   const inputField = document.getElementById('ai-chat-input');
   const messagesContainer = document.getElementById('ai-chat-messages');
-
   // Toggle Chat Window Open/Close
   toggleBtn.addEventListener('click', () => {
     chatWindow.classList.toggle('hidden');
@@ -954,17 +909,14 @@
   closeBtn.addEventListener('click', () => {
     chatWindow.classList.add('hidden');
   });
-
   // Handle Send Message
   function handleSendMessage() {
     const text = inputField.value.trim();
     if (!text) return;
-
     // User Message Append
     appendMessage(text, 'user');
     inputField.value = '';
-
-    // Simulated AI Response (Aap ise apne backend API ya LLM se connect kar sakte hain)
+    // Simulated AI Response
     setTimeout(() => {
       let botReply = "Aapke is sawal ke liye jald hi update yahan list ki jayegi. Aap upar diye gaye sections (Academics, Placement Prep, Govt Exams) ko check kar sakte hain!";
       
@@ -976,11 +928,9 @@
       } else if(lowerText.includes('scholarship')) {
         botReply = "Scholarships section me current open scholarships aur unki eligibility criteria ki puri jankari di gayi hai.";
       }
-
       appendMessage(botReply, 'bot');
     }, 600);
   }
-
   function appendMessage(text, sender) {
     const msgDiv = document.createElement('div');
     if(sender === 'user') {
@@ -992,14 +942,17 @@
     messagesContainer.appendChild(msgDiv);
     messagesContainer.scrollTop = messagesContainer.scrollHeight;
   }
-
   window.sendPresetMessage = function(presetText) {
     inputField.value = presetText;
     handleSendMessage();
   }
   sendBtn.addEventListener('click', handleSendMessage);
   inputField.addEventListener('keypress', (e) => {
-    if(e.key === 'Enter') handleSendMessage();
-  const adScript = document.createElement('script');
-adScript.src = "https://pl31251825.profitableratecpnetwork.com/18/9c/28/189c28b9fe5f16b60f24904ed43b04fe.js";
-document.body.appendChild(adScript);
+    if (e.key === 'Enter') {
+      handleSendMessage();
+    }
+  });
+</script>
+
+<!-- Adsterra Social Bar Script (Properly Placed at the Very End) -->
+<script src="https://pl31251825.profitableratecpmnetwork.com/18/9c/28/189c28b9fe5f16b60f24904ed43b04fe.js"></script>
